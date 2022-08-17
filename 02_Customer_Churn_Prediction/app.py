@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 # Take inputs from user
-st.image('./churn.jpeg')
+#st.image('./churn.jpeg')
 tenure = st.number_input("Tenure", 1, 1000)
 monthlycharges = st.slider("Monthly Charges", 10, 1000)
 totalcharges = st.slider("Total Charges", monthlycharges, 10000)
