@@ -22,13 +22,13 @@ df_new = pd.DataFrame({'tenure': [tenure], 'monthlycharges': [monthlycharges], '
                       onlinesecurity], 'techsupport': [techsupport], 'internetservice': [internetservice], 'onlinebackup': [onlinebackup]})
 
 # Load the transformer
-transformer = pkl.load(open('transformer.pkl', 'rb'))
+transformer = pkl.load(open('./transformer.pkl', 'rb'))
 
 # Apply the transformer on the inputs
 X_new = transformer.transform(df_new)
 
 # Load the model
-model = pkl.load(open('model.pkl', 'rb'))
+model = pkl.load(open('./model.pkl', 'rb'))
 
 # Predict the output
 churn_prop = model.predict_proba(X_new)[0][1] * 100
