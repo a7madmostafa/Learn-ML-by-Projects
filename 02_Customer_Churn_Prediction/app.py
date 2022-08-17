@@ -22,7 +22,7 @@ df_new = pd.DataFrame({'tenure': [tenure], 'monthlycharges': [monthlycharges], '
                       onlinesecurity], 'techsupport': [techsupport], 'internetservice': [internetservice], 'onlinebackup': [onlinebackup]})
 
 # Load the transformer
-transformer = pkl.load(open('./transformer.pkl', 'rb'))
+transformer = pickle.load(open('transformer.pkl', 'rb'))
 
 # Apply the transformer on the inputs
 X_new = transformer.transform(df_new)
