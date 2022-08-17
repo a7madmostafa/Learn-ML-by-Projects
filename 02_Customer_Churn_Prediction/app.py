@@ -1,4 +1,4 @@
-import pickle as pkl
+import pickle 
 import streamlit as st
 import pandas as pd
 
@@ -28,7 +28,7 @@ transformer = pkl.load(open('./transformer.pkl', 'rb'))
 X_new = transformer.transform(df_new)
 
 # Load the model
-model = pkl.load(open('./model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 # Predict the output
 churn_prop = model.predict_proba(X_new)[0][1] * 100
